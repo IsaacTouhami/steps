@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+:root {
+  --mainColor: #e53e3e;
+  --secondaryColor: #f07373;
+  --pageColor: #1d1f21;
+}
+
+::selection {
+  background-color: var(--mainColor);
+  color: rgb(255, 255, 255);
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Mono", sans-serif;
+  background-color: var(--pageColor);
+  color: rgb(255, 255, 255);
+  min-height: 100vh;
+  width: 100%;
+  overflow: overlay;
+}
+
+
+/* an x button*/
+.open {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform-origin: center;
+  position: absolute;
+  transform: rotate(0deg);
+  top: 250px;
+  right: 500px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.open:hover {
+  color: var(--mainColor);
+}
+
+.ready {
+  transform: rotate(45deg);
+}
+
+.steps {
+  display: flex;
+  border-radius: 10px;
+  background-color: #433c3b;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 700px;
+  height: 300px;
+}
+
+.numbers {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.numbers div {
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: #433c3b;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.active {
+  background-color: var(--mainColor) !important;
+}
+
+.steps p {
+  font-size: 20px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: var(--mainColor);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.buttons button:hover {
+  background-color: rgb(255, 255, 255);
+  color: var(--mainColor);
+}
+
+.buttons button:active {
+  transform: scale(0.9);
+}
+
+.grey {
+  filter: grayscale(100%);
+}
