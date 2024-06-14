@@ -41,8 +41,8 @@ export default function App(){
       <p>Step{step}: {message[step-1]}</p>
 
       <div className="buttons">
-        <button className={step==1 ? "grey": ""} onClick={goLeft}>Previous</button>
-        <button className={step==3 ? "grey": ""} onClick={goRight}>Next</button>
+        <button className={step===1 ? "grey": ""} onClick={goLeft}>Previous</button>
+        <button className={step===3 ? "grey": ""} onClick={goRight}>Next</button>
       </div>
     </div>
     }
